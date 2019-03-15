@@ -1,0 +1,20 @@
+var form = new FormData();
+form.append("__VIEWSTATE", "/wEPDwUJODQ5MDQ3NzI3D2QWAmYPZBYEAgEPDxYCHgRUZXh0BQVGTzExMWRkAgIPDxYCHwAFBGhlcnpkZGS0fKrirWn0k/UdgWunNZPR8jF3ShBdJIWVB0yGj1GA2w==");
+form.append("__VIEWSTATEGENERATOR", "D5B5CA0F");
+form.append("btnLogin", "");
+
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=herz",
+  "method": "POST",
+  "headers": {},
+  "processData": false,
+  "contentType": false,
+  "mimeType": "multipart/form-data",
+  "data": form
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});

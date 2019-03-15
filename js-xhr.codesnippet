@@ -1,0 +1,17 @@
+var data = new FormData();
+data.append("__VIEWSTATE", "/wEPDwUJODQ5MDQ3NzI3D2QWAmYPZBYEAgEPDxYCHgRUZXh0BQVGTzExMWRkAgIPDxYCHwAFBGhlcnpkZGS0fKrirWn0k/UdgWunNZPR8jF3ShBdJIWVB0yGj1GA2w==");
+data.append("__VIEWSTATEGENERATOR", "D5B5CA0F");
+data.append("btnLogin", "");
+
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === 4) {
+    console.log(this.responseText);
+  }
+});
+
+xhr.open("POST", "https://mensadigital.de/LOGINPLAN.ASPX?P=FO111&E=herz");
+
+xhr.send(data);

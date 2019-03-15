@@ -1,0 +1,16 @@
+var request = require("request");
+
+var options = { method: 'POST',
+  url: 'https://mensadigital.de/LOGINPLAN.ASPX',
+  qs: { P: 'FO111', E: 'herz' },
+  headers: { 'content-type': 'multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' },
+  formData: 
+   { __VIEWSTATE: '/wEPDwUJODQ5MDQ3NzI3D2QWAmYPZBYEAgEPDxYCHgRUZXh0BQVGTzExMWRkAgIPDxYCHwAFBGhlcnpkZGS0fKrirWn0k/UdgWunNZPR8jF3ShBdJIWVB0yGj1GA2w==',
+     __VIEWSTATEGENERATOR: 'D5B5CA0F',
+     btnLogin: '' } };
+
+request(options, function (error, response, body) {
+  if (error) throw new Error(error);
+
+  console.log(body);
+});
